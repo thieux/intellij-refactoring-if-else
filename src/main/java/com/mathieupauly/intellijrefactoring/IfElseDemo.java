@@ -4,7 +4,10 @@ public class IfElseDemo {
 
     public double calculateInsurance(double income) {
         if (income <= 10000) {
-            return income * 0.365;
+            double adjustement = 0;
+            double weight = 0.365;
+            double constant = 0;
+            return (income - adjustement) * weight + constant;
         } else if (income <= 30000) {
             final int adjustement = 10000;
             final double weight = 0.2;
