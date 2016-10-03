@@ -10,7 +10,10 @@ public class IfElseDemo {
         } else if (income <= 60000) {
             return (income - 30000) * 0.1 + 76500;
         } else {
-            return (income - 60000) * 0.02 + 105600;
+            final int adjustement = 60000;
+            final double weight = 0.02;
+            final int constant = 105600;
+            return (income - adjustement) * weight + constant;
         }
     }
 }
