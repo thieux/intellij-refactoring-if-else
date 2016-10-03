@@ -2,7 +2,7 @@ package com.mathieupauly.intellijrefactoring;
 
 public class IfElseDemo {
 
-    private VeryHighInsuranceStrategy strategy = new VeryHighInsuranceStrategy();
+    private VeryHighInsuranceStrategy strategy;
 
     public double calculateInsurance(double income) {
         if (income <= 10000) {
@@ -12,6 +12,7 @@ public class IfElseDemo {
         } else if (income <= 60000) {
             return (income - 30000) * 0.1 + 76500;
         } else {
+            strategy = new VeryHighInsuranceStrategy();
             return strategy.calculateVeryHighInsurance(income);
         }
     }
