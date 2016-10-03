@@ -8,7 +8,8 @@ public class IfElseDemo {
         if (income <= 10000) {
             return income * 0.365;
         } else if (income <= 30000) {
-            return (income - 10000) * 0.2 + 35600;
+            strategy = new MediumInsuranceStrategy();
+            return strategy.calculateVeryHighInsurance(income);
         } else if (income <= 60000) {
             strategy = new HighInsuranceStrategy();
             return strategy.calculateVeryHighInsurance(income);
