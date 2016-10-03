@@ -7,16 +7,16 @@ public class IfElseDemo {
     public double calculateInsurance(double income) {
         if (income <= 10000) {
             strategy = new LowInsuranceStrategy();
-            return strategy.calculateVeryHighInsurance(income);
+            return strategy.calculate(income);
         } else if (income <= 30000) {
             strategy = new MediumInsuranceStrategy();
-            return strategy.calculateVeryHighInsurance(income);
+            return strategy.calculate(income);
         } else if (income <= 60000) {
             strategy = new HighInsuranceStrategy();
-            return strategy.calculateVeryHighInsurance(income);
+            return strategy.calculate(income);
         } else {
             strategy = new VeryHighInsuranceStrategy();
-            return strategy.calculateVeryHighInsurance(income);
+            return strategy.calculate(income);
         }
     }
 

@@ -1,7 +1,7 @@
 package com.mathieupauly.intellijrefactoring;
 
 public abstract class InsuranceStrategy {
-    double calculateVeryHighInsurance(double income) {
+    double calculate(double income) {
         return (income - adjustment()) * weight() + constant();
     }
 
