@@ -15,6 +15,18 @@ public class IfElseDemo {
     }
 
     private double calculateVeryHighInsurance(double income) {
-        return (income - 60000) * 0.02 + 105600;
+        return (income - adjustment()) * weight() + constant();
+    }
+
+    private int constant() {
+        return 105600;
+    }
+
+    private double weight() {
+        return 0.02;
+    }
+
+    private int adjustment() {
+        return 60000;
     }
 }
