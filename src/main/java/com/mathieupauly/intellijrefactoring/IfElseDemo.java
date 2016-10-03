@@ -2,7 +2,7 @@ package com.mathieupauly.intellijrefactoring;
 
 public class IfElseDemo {
 
-    private VeryHighInsuranceStrategy strategy;
+    private InsuranceStrategy strategy;
 
     public double calculateInsurance(double income) {
         if (income <= 10000) {
