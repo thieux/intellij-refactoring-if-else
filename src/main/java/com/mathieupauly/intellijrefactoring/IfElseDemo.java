@@ -8,14 +8,15 @@ public class IfElseDemo {
 
     private InsuranceStrategy baseStrategyOn(double income) {
         if (income <= 10000) {
-            return new InsuranceStrategy(0, 0.365, 0);
+            return InsuranceStrategy.LOW;
         } else if (income <= 30000) {
-            return new InsuranceStrategy(10000, 0.2, 35600);
+            return InsuranceStrategy.MEDIUM;
         } else if (income <= 60000) {
-            return new InsuranceStrategy(30000, 0.1, 76500);
+            return InsuranceStrategy.HIGH;
         } else {
-            return new InsuranceStrategy(60000, 0.02, 105600);
+            return InsuranceStrategy.VERY_HIGH;
         }
     }
+
 
 }
